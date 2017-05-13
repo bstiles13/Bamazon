@@ -1,0 +1,26 @@
+{
+  "name": "Bamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bstiles13/Bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bstiles13/Bamazon/issues"
+  },
+  "homepage": "https://github.com/bstiles13/Bamazon#readme",
+  "dependencies": {
+    "columnify": "^1.5.4",
+    "inquirer": "^3.0.6",
+    "mysql": "^2.13.0",
+    "require": "^2.4.20"
+  }
+}
