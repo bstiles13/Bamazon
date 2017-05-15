@@ -17,7 +17,7 @@ connection.connect(function(err) {
 });
 
 //Global variables
-var line = '\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n';
+var line = '\n:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n';
 var choices = [];
 var saleProduct;
 var saleDepartment;
@@ -108,10 +108,10 @@ function shop() {
             var saleTotal = saleUnitPrice * user.qty;
             console.log('Thank you for your order of ' + user.qty + ' ' + saleProduct + '(s).');
             console.log('Order Total: $' + saleTotal);
-            console.log(qty);
-            console.log(id);
-            console.log(saleTotal);
-            console.log(saleDepartment);
+            // console.log(qty);
+            // console.log(id);
+            // console.log(saleTotal);
+            // console.log(saleDepartment);
             // console.log(userId);
 
             //After the sale, the database is updated with new stock and sales numbers
@@ -156,13 +156,14 @@ function restart() {
     inquirer.prompt([{
         type: 'list',
         message: 'Would you like to place another order?',
-        choices: ['Yes', 'I am done'],
+        choices: ['Yes', 'Logout'],
         name: 'choice'
     }]).then(function(user) {
         if (user.choice === 'Yes') {
             start();
         } else {
-            return;
+            console.log('\nYou are logged out.\n');
+            login();
         }
     })
 }
