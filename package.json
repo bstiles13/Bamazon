@@ -19,6 +19,7 @@
   "homepage": "https://github.com/bstiles13/Bamazon#readme",
   "dependencies": {
     "columnify": "^1.5.4",
+    "cryptr": "^2.0.0",
     "inquirer": "^3.0.6",
     "mysql": "^2.13.0",
     "require": "^2.4.20"

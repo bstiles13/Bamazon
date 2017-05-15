@@ -14,6 +14,9 @@ CREATE TABLE products (
 ALTER TABLE products
 ADD COLUMN product_sales DECIMAL(12,2) DEFAULT 0 AFTER stock;
 
+UPDATE products SET product_sales = 10, stock = 9 WHERE id = 2;
+
+
 SELECT * FROM products;
 
 CREATE TABLE departments(
@@ -31,3 +34,26 @@ INSERT INTO departments (department_name) VALUES ("Home/Garden");
 INSERT INTO departments (department_name) VALUES ("Sports/Outdoors");
 
 SELECT * FROM departments;
+
+SELECT *, total_sales - over_head_costs AS total_profit FROM departments;
+
+CREATE TABLE users(
+		id INT AUTO_INCREMENT NOT NULL,
+        first_name VARCHAR(100) NOT NULL,
+        last_name VARCHAR(100) NOT NULL,
+        email VARCHAR(50) NOT NULL,
+        password VARCHAR(50) NOT NULL,
+        PRIMARY KEY (id)
+);
+
+SELECT * FROM users;
+
+CREATE TABLE customer_history(
+		id INT AUTO_INCREMENT NOT NULL,
+        customer VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        sales DECIMAL(12,2) DEFAULT 0,
+        PRIMARY KEY (id)
+);
+
+SELECT * FROM customer_history;
